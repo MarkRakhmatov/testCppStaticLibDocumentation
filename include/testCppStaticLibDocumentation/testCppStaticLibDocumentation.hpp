@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-/*! \mainpage CppStaticLib
+/*! \mainpage testCppStaticLibDocumentation
  *
  * \section intro_sec Introduction
  *

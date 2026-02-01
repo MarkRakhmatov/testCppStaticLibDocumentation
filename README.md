@@ -1,9 +1,9 @@
-# CppStaticLib
+# testCppStaticLibDocumentation
 
-[![ci](https://github.com/MarkRakhmatov/CppStaticLibTemplate/actions/workflows/ci.yml/badge.svg)](https://github.com/MarkRakhmatov/CppStaticLibTemplate/actions/workflows/ci.yml)
+[![ci](https://github.com/MarkRakhmatov/testCppStaticLibDocumentation/actions/workflows/ci.yml/badge.svg)](https://github.com/MarkRakhmatov/testCppStaticLibDocumentation/actions/workflows/ci.yml)
 
-## About
-C++ 23 static library template
+## About testCppStaticLibDocumentation
+just for testing, DO NOT USE IT
 
 ### By default:
 * Warnings as errors
@@ -16,7 +16,9 @@ C++ 23 static library template
 * fuzz testing using [fuzztest](https://github.com/google/fuzztest)
 * tooling to verify consistent commits format inspired by [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
 * autocreation of [version](https://semver.org/) tags in main branch based on commits
-* Optional documentation generation from annotations in code using [doxygen](https://www.doxygen.nl)
+* Optional documentation generation from annotations in code using [doxygen](https://www.doxygen.nl).
+To build documentation install doxygen and set CMake variable testCppStaticLibDocumentation_DOC.
+If doxygen not found, set testCppStaticLibDocumentation_DOXYGEN_SEARCH_PATHS to directory contaning doxygen binaries.
 
 #### Commits format
 
@@ -28,7 +30,7 @@ api: remove deprecated v1 API
 api(parser): hide parser API from public interface
 ```
 
-2. New feature or backward compatible API change (will increment minor version and reset patch to 0)
+2. New feature or backward compatible API change (will increment major version)
 ```
 feat: introduce parser v2 API
 feat(parser): extend parser v2 API public interface
@@ -52,3 +54,19 @@ refactor(parser): reduce heap allocations in parser v2 API
 | MSVC |:heavy_check_mark: | |
 | clang | | :heavy_check_mark: |
 | gcc | | :heavy_check_mark: |
+
+### Usage
+#### CMake
+To use testCppStaticLibDocumentation library in cmake project:
+
+```
+CPMAddPackage("gh:MarkRakhmatov/testCppStaticLibDocumentation@v0.1.0")
+```
+
+Link testCppStaticLibDocumentation library to your target
+```
+target_link_libraries(your_target PRIVATE testCppStaticLibDocumentation)
+```
+
+#### Examples
+TODO: add code examples
