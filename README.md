@@ -16,7 +16,7 @@ just for testing, DO NOT USE IT
 * fuzz testing using [fuzztest](https://github.com/google/fuzztest)
 * tooling to verify consistent commits format inspired by [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
 * autocreation of [version](https://semver.org/) tags in main branch based on commits
-* Optional documentation generation from annotations in code using [doxygen](https://www.doxygen.nl).
+* Documentation generation from annotations in code using [doxygen](https://www.doxygen.nl).
 To build documentation install doxygen and set CMake variable testCppStaticLibDocumentation_DOC.
 If doxygen not found, set testCppStaticLibDocumentation_DOXYGEN_SEARCH_PATHS to directory contaning doxygen binaries.
 
